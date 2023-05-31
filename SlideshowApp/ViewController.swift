@@ -8,19 +8,41 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    let imageName = ["flower1", "flower2", "flower3"]
+    var changeImgNo = 0
+    
     
     @IBOutlet weak var image: UIImageView!
     
+
+    @IBAction func gobtn(_ sender: Any) {
+        if changeImgNo == 0 {
+            changeImgNo = 1
+        } else if changeImgNo == 1 {
+            changeImgNo = 2 }
+        else if changeImgNo == 2 {
+            changeImgNo = 0 }
+        let name = imageName[changeImgNo]
+        image.image = UIImage(named: name) }
     
+    @IBAction func backbtn(_ sender: Any) {
+        if changeImgNo == 0 {
+            changeImgNo = 2
+        } else if changeImgNo == 2 {
+            changeImgNo = 1 }
+        else if changeImgNo == 1 {
+            changeImgNo = 0 }
+        let name = imageName[changeImgNo]
+        image.image = UIImage(named: name)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        
-        let sampleImage = UIImage(named: "flower1")
-        image.image = sampleImage
+        let imageName = UIImage(named: "flower1")
+        image.image = imageName
         
     }
     
