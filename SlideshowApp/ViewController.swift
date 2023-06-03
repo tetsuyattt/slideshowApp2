@@ -11,18 +11,14 @@ class ViewController: UIViewController {
     
     let imageName = ["flower1", "flower2", "flower3"]
     var changeImgNo = 0
-   
     var timer: Timer! //タイマー
     
     
     @IBOutlet weak var imageView: UIImageView!
-    
-    
-    
 
+    
     func displayImage() {
-        let imageName = ["flower1", "flower2", "flower3"]
-        //上流のプロパティで「let imageName = ["flower1", "flower2", "flower3"]」宣言しているので改めて宣言しなくてok？
+        //上流のプロパティで「let imageName = ["flower1", "flower2", "flower3"]」宣言しているので改めて宣言しなくてok？　→okだわ
         if changeImgNo < 0 {changeImgNo = 2 }
         if changeImgNo > 2 {changeImgNo = 0 }
         //表示中の画像Noから名前を取り出す　nameが”　”になる
@@ -43,7 +39,7 @@ class ViewController: UIViewController {
     }
     
  
-    @IBOutlet weak var nextbtn: UIButton!  //押せなくなるのに必須
+    @IBOutlet weak var nextbtn: UIButton!  //押せなくなるのに必須？
     @IBOutlet weak var backbtn: UIButton!
     
     
@@ -55,7 +51,6 @@ class ViewController: UIViewController {
             backbtn.isEnabled = false
             sender.setTitle("再生中", for: .normal)
         }
-        
         else {      //タイマーが"nil"じゃない時
             self.timer.invalidate() //タイマー止める
             self.timer = nil
@@ -63,14 +58,10 @@ class ViewController: UIViewController {
             backbtn.isEnabled = true
             sender.setTitle("停止中", for: .normal)
         }
-        
     }
-        
-        // let name = imageName[changeImgNo],imageView.image = UIImage(named: name)←ここにあったけど、なくていい
     
     
     @objc private func timerUpdate() {
-            print("onTimer")
             changeImgNo += 1
             displayImage()
     }
@@ -78,7 +69,7 @@ class ViewController: UIViewController {
     private func display() {
         let name = imageName[changeImgNo]
         imageView.image = UIImage(named: name)
-    }   //←ChatGPTに教えてもらったらやつ、自動送りされるようになった
+    }   //←ChatGPTに教えてもらったらやつ、これ入れたら自動送りされるようになった
     
     
     @IBAction func backbtn(_ sender: Any) {
@@ -99,8 +90,23 @@ class ViewController: UIViewController {
         
         let imageName = UIImage(named: "flower1")
         imageView.image = imageName
+        
+        
+        let tapGestureRecognizer = UIGestureRecognizer(target: self, action: #selector(imageTapped))
+        imageView.addGestureRecognizer(tapGestureRecognizer)
+        imageView.isUserInteractionEnabled = true
     }
     
- 
+    @objc func imageTapped() {
+        let magImgViewController = storyboard?.instantiateViewController(withIdentifier: "magImgViewController") as! magImgViewController
+        magImgViewController.magImage = imageView.image
+        present(magImgViewController, animated: true, completion: nil)
+    }
+    
+    @IBAction func unwind(_ segue: UIStoryboardSegue) {
+        
+    }
+    
+    
 }
 

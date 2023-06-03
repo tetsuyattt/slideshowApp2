@@ -28,7 +28,7 @@
                                     <action selector="nextbtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VA4-Gu-0i7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="startstopbtn" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" toolTip="停止" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgD-hV-xzc">
+                            <button toolTip="停止" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="startstopbtn" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgD-hV-xzc">
                                 <rect key="frame" x="133" y="586" width="127" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemCyanColor"/>
@@ -40,9 +40,13 @@
                                     <action selector="startstopbtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cxL-j4-mfE"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="imageView" translatesAutoresizingMaskIntoConstraints="NO" id="vmW-0V-P5R">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="imageView" translatesAutoresizingMaskIntoConstraints="NO" id="vmW-0V-P5R">
                                 <rect key="frame" x="76" y="304" width="274" height="183"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="RNf-Vw-Nwi" appends="YES" id="fEc-Jm-r1M"/>
+                                </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGZ-88-GUr">
                                 <rect key="frame" x="275" y="586" width="75" height="51"/>
@@ -67,23 +71,51 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="RNf-Vw-Nwi">
+                    <connections>
+                        <action selector="touchImage:" destination="BYZ-38-t0r" id="BI2-Wv-MY5"/>
+                        <segue destination="ebH-tD-m2d" kind="show" identifier="magImgViewC" id="Srd-Zd-FVt"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
         </scene>
-        <!--View Controller-->
+        <!--Mag Img View Controller-->
         <scene sceneID="3Mq-6f-7hb">
             <objects>
-                <viewController id="ebH-tD-m2d" sceneMemberID="viewController">
+                <viewController id="ebH-tD-m2d" customClass="magImgViewController" customModule="SlideshowApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rxh-PR-qGZ">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dm6-uQ-rFS">
+                                <rect key="frame" x="167" y="604" width="59" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="戻る"/>
+                                <connections>
+                                    <segue destination="vUJ-cD-u1W" kind="unwind" unwindAction="unwind:" id="xa5-C5-PWq"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ygl-ry-oj0">
+                                <rect key="frame" x="33" y="234" width="301" height="221"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="nGP-uf-b68"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ZRS-aH-oem"/>
+                    <connections>
+                        <outlet property="magImgView" destination="ygl-ry-oj0" id="tqT-hY-jm5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0FK-Lc-uPr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="vUJ-cD-u1W" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="775" y="-27"/>
+            <point key="canvasLocation" x="925.95419847328242" y="-27.464788732394368"/>
         </scene>
     </scenes>
     <resources>

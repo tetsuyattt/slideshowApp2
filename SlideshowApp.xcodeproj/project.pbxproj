@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA1FA55E2A2B0B8E003343F2 /* magImgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1FA55D2A2B0B8E003343F2 /* magImgViewController.swift */; };
 		DAD2AB4E2A276CF700452467 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD2AB4D2A276CF700452467 /* AppDelegate.swift */; };
 		DAD2AB502A276CF700452467 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD2AB4F2A276CF700452467 /* SceneDelegate.swift */; };
 		DAD2AB522A276CF700452467 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD2AB512A276CF700452467 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA1FA55D2A2B0B8E003343F2 /* magImgViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = magImgViewController.swift; sourceTree = "<group>"; };
 		DAD2AB4A2A276CF700452467 /* SlideshowApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideshowApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD2AB4D2A276CF700452467 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAD2AB4F2A276CF700452467 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				DAD2AB4D2A276CF700452467 /* AppDelegate.swift */,
 				DAD2AB4F2A276CF700452467 /* SceneDelegate.swift */,
 				DAD2AB512A276CF700452467 /* ViewController.swift */,
+				DA1FA55D2A2B0B8E003343F2 /* magImgViewController.swift */,
 				DAD2AB532A276CF700452467 /* Main.storyboard */,
 				DAD2AB562A276CFB00452467 /* Assets.xcassets */,
 				DAD2AB582A276CFB00452467 /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				DAD2AB522A276CF700452467 /* ViewController.swift in Sources */,
 				DAD2AB4E2A276CF700452467 /* AppDelegate.swift in Sources */,
+				DA1FA55E2A2B0B8E003343F2 /* magImgViewController.swift in Sources */,
 				DAD2AB502A276CF700452467 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
