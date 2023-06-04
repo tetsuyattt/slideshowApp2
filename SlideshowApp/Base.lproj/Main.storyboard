@@ -112,19 +112,21 @@
                                     <segue destination="vUJ-cD-u1W" kind="unwind" unwindAction="unwind:" id="xa5-C5-PWq"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ygl-ry-oj0">
-                                <rect key="frame" x="50" y="234" width="293" height="221"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ygl-ry-oj0">
+                                <rect key="frame" x="0.0" y="59" width="393" height="539"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nGP-uf-b68"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="nGP-uf-b68" firstAttribute="trailing" secondItem="ygl-ry-oj0" secondAttribute="trailing" id="5gM-ZS-YFp"/>
                             <constraint firstItem="Dm6-uQ-rFS" firstAttribute="leading" secondItem="nGP-uf-b68" secondAttribute="leading" constant="50" id="9Z7-UV-rje"/>
+                            <constraint firstItem="ygl-ry-oj0" firstAttribute="top" secondItem="nGP-uf-b68" secondAttribute="top" id="AWZ-bl-bTo"/>
                             <constraint firstItem="nGP-uf-b68" firstAttribute="bottom" secondItem="Dm6-uQ-rFS" secondAttribute="bottom" constant="100" id="Adl-0v-Om0"/>
+                            <constraint firstItem="ygl-ry-oj0" firstAttribute="leading" secondItem="nGP-uf-b68" secondAttribute="leading" id="JNf-jZ-xlf"/>
+                            <constraint firstItem="ygl-ry-oj0" firstAttribute="top" secondItem="nGP-uf-b68" secondAttribute="top" id="QK2-6P-mGA"/>
                             <constraint firstItem="nGP-uf-b68" firstAttribute="trailing" secondItem="Dm6-uQ-rFS" secondAttribute="trailing" constant="50" id="WAy-KN-KPe"/>
-                            <constraint firstItem="ygl-ry-oj0" firstAttribute="top" secondItem="nGP-uf-b68" secondAttribute="top" constant="250" id="i8D-rg-CLn"/>
-                            <constraint firstItem="ygl-ry-oj0" firstAttribute="leading" secondItem="nGP-uf-b68" secondAttribute="leading" constant="50" id="lbG-O2-5fk"/>
-                            <constraint firstItem="nGP-uf-b68" firstAttribute="trailing" secondItem="ygl-ry-oj0" secondAttribute="trailing" constant="50" id="llI-Pb-25y"/>
+                            <constraint firstItem="Dm6-uQ-rFS" firstAttribute="top" secondItem="ygl-ry-oj0" secondAttribute="bottom" constant="50" id="jTU-yE-hi9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZRS-aH-oem"/>

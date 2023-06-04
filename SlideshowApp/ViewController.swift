@@ -98,15 +98,19 @@ class ViewController: UIViewController {
     }
     
     @objc func imageTapped() {
-        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            //let magImgViewController: magImgViewController = segue.destination as! magImgViewController
-            //magImgViewController.magImage = imageView.image
-            
-            let magImgViewController = storyboard?.instantiateViewController(withIdentifier: "magImgViewController") as! magImgViewController
-            magImgViewController.magImage = imageView.image
-            present(magImgViewController, animated: true, completion: nil)
-        }
+        performSegue(withIdentifier: "magImgViewC", sender: self)
     }
+        
+    
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            let magImgViewController: magImgViewController = segue.destination as! magImgViewController
+            magImgViewController.magImage = imageView.image
+    
+            //let magImgViewController = storyboard?.instantiateViewController(withIdentifier: "magImgViewController") as! magImgViewController
+            //magImgViewController.magImage = imageView.image
+            //present(magImgViewController, animated: true, completion: nil)
+        }//「func prepare()」を「objc func imageTapped()」内に入れてたけど、ChatGPTから「外に出せ」って言われて外に出したらできた。あと、「objc func imageTapped()」に「performSegue()」入れろって言われたからそうしたらできた。GPTさんすげー
+    
     
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
         
