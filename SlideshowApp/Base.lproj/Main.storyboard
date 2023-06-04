@@ -16,53 +16,67 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndZ-x1-HYN">
-                                <rect key="frame" x="32" y="586" width="75" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemCyanColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="進む" buttonSize="large">
-                                    <color key="baseForegroundColor" systemColor="tertiarySystemBackgroundColor"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="nextbtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VA4-Gu-0i7"/>
-                                </connections>
-                            </button>
-                            <button toolTip="停止" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="startstopbtn" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgD-hV-xzc">
-                                <rect key="frame" x="133" y="586" width="127" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemCyanColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="再生／停止" buttonSize="large">
-                                    <color key="baseForegroundColor" systemColor="tertiarySystemBackgroundColor"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="startstopbtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cxL-j4-mfE"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="imageView" translatesAutoresizingMaskIntoConstraints="NO" id="vmW-0V-P5R">
-                                <rect key="frame" x="76" y="304" width="274" height="183"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="b1b-mk-uQy">
+                                <rect key="frame" x="50" y="667.66666666666663" width="293" height="50.333333333333371"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndZ-x1-HYN">
+                                        <rect key="frame" x="0.0" y="0.0" width="84.333333333333329" height="50.333333333333336"/>
+                                        <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="進む" buttonSize="large">
+                                            <color key="baseForegroundColor" systemColor="tertiarySystemBackgroundColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="nextbtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VA4-Gu-0i7"/>
+                                        </connections>
+                                    </button>
+                                    <button toolTip="停止" opaque="NO" contentMode="scaleToFill" restorationIdentifier="startstopbtn" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgD-hV-xzc">
+                                        <rect key="frame" x="104.33333333333334" y="0.0" width="84.333333333333343" height="50.333333333333336"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="再生" buttonSize="large">
+                                            <color key="baseForegroundColor" systemColor="tertiarySystemBackgroundColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="startstopbtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cxL-j4-mfE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGZ-88-GUr">
+                                        <rect key="frame" x="208.66666666666669" y="0.0" width="84.333333333333314" height="50.333333333333336"/>
+                                        <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="戻る" buttonSize="large">
+                                            <color key="baseForegroundColor" systemColor="tertiarySystemBackgroundColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="backbtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gu6-eo-f0e"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="imageView" translatesAutoresizingMaskIntoConstraints="NO" id="vmW-0V-P5R">
+                                <rect key="frame" x="50" y="309" width="293" height="250"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="Ubf-Ag-hIv"/>
+                                </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="RNf-Vw-Nwi" appends="YES" id="fEc-Jm-r1M"/>
                                 </connections>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGZ-88-GUr">
-                                <rect key="frame" x="275" y="586" width="75" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemCyanColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="戻る" buttonSize="large">
-                                    <color key="baseForegroundColor" systemColor="tertiarySystemBackgroundColor"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="backbtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gu6-eo-f0e"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vmW-0V-P5R" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="250" id="Izj-Ht-o0F"/>
+                            <constraint firstItem="vmW-0V-P5R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="MBM-3x-wVf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="b1b-mk-uQy" secondAttribute="bottom" constant="100" id="S0E-QF-ha4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vmW-0V-P5R" secondAttribute="trailing" constant="50" id="Y0Z-su-sCA"/>
+                            <constraint firstItem="b1b-mk-uQy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="YF9-e6-fs6"/>
+                            <constraint firstItem="vmW-0V-P5R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="hfZ-hs-sJh"/>
+                            <constraint firstAttribute="trailing" secondItem="b1b-mk-uQy" secondAttribute="trailing" constant="50" id="lVs-Wn-YS5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vmW-0V-P5R" secondAttribute="trailing" constant="50" id="tbx-Hv-f1N"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="backbtn" destination="aGZ-88-GUr" id="J2h-Cq-9lw"/>
@@ -88,9 +102,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dm6-uQ-rFS">
-                                <rect key="frame" x="167" y="604" width="59" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dm6-uQ-rFS">
+                                <rect key="frame" x="50" y="648" width="293" height="35"/>
                                 <color key="backgroundColor" systemColor="systemCyanColor"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -99,13 +112,20 @@
                                     <segue destination="vUJ-cD-u1W" kind="unwind" unwindAction="unwind:" id="xa5-C5-PWq"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ygl-ry-oj0">
-                                <rect key="frame" x="33" y="234" width="301" height="221"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ygl-ry-oj0">
+                                <rect key="frame" x="50" y="234" width="293" height="221"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nGP-uf-b68"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Dm6-uQ-rFS" firstAttribute="leading" secondItem="nGP-uf-b68" secondAttribute="leading" constant="50" id="9Z7-UV-rje"/>
+                            <constraint firstItem="nGP-uf-b68" firstAttribute="bottom" secondItem="Dm6-uQ-rFS" secondAttribute="bottom" constant="100" id="Adl-0v-Om0"/>
+                            <constraint firstItem="nGP-uf-b68" firstAttribute="trailing" secondItem="Dm6-uQ-rFS" secondAttribute="trailing" constant="50" id="WAy-KN-KPe"/>
+                            <constraint firstItem="ygl-ry-oj0" firstAttribute="top" secondItem="nGP-uf-b68" secondAttribute="top" constant="250" id="i8D-rg-CLn"/>
+                            <constraint firstItem="ygl-ry-oj0" firstAttribute="leading" secondItem="nGP-uf-b68" secondAttribute="leading" constant="50" id="lbG-O2-5fk"/>
+                            <constraint firstItem="nGP-uf-b68" firstAttribute="trailing" secondItem="ygl-ry-oj0" secondAttribute="trailing" constant="50" id="llI-Pb-25y"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZRS-aH-oem"/>
                     <connections>
@@ -124,6 +144,9 @@
         </systemColor>
         <systemColor name="systemCyanColor">
             <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

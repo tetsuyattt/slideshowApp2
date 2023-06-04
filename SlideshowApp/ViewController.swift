@@ -98,9 +98,14 @@ class ViewController: UIViewController {
     }
     
     @objc func imageTapped() {
-        let magImgViewController = storyboard?.instantiateViewController(withIdentifier: "magImgViewController") as! magImgViewController
-        magImgViewController.magImage = imageView.image
-        present(magImgViewController, animated: true, completion: nil)
+        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            //let magImgViewController: magImgViewController = segue.destination as! magImgViewController
+            //magImgViewController.magImage = imageView.image
+            
+            let magImgViewController = storyboard?.instantiateViewController(withIdentifier: "magImgViewController") as! magImgViewController
+            magImgViewController.magImage = imageView.image
+            present(magImgViewController, animated: true, completion: nil)
+        }
     }
     
     @IBAction func unwind(_ segue: UIStoryboardSegue) {

@@ -20,7 +20,6 @@ class magImgViewController: UIViewController {
 
         magImgView.image = magImage
         
-        
         // Do any additional setup after loading the view.
     }
     
