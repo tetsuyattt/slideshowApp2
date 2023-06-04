@@ -14,6 +14,9 @@
 		DAD2AB552A276CF700452467 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAD2AB532A276CF700452467 /* Main.storyboard */; };
 		DAD2AB572A276CFB00452467 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAD2AB562A276CFB00452467 /* Assets.xcassets */; };
 		DAD2AB5A2A276CFB00452467 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAD2AB582A276CFB00452467 /* LaunchScreen.storyboard */; };
+		DAF8AB562A2C8D26006FC579 /* flower1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DAF8AB552A2C8D26006FC579 /* flower1.jpeg */; };
+		DAF8AB582A2C8D44006FC579 /* flower3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DAF8AB572A2C8D43006FC579 /* flower3.jpeg */; };
+		DAF8AB5A2A2C8D65006FC579 /* fower2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DAF8AB592A2C8D65006FC579 /* fower2.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		DAD2AB562A276CFB00452467 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAD2AB592A276CFB00452467 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DAD2AB5B2A276CFB00452467 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAF8AB552A2C8D26006FC579 /* flower1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = flower1.jpeg; sourceTree = "<group>"; };
+		DAF8AB572A2C8D43006FC579 /* flower3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = flower3.jpeg; sourceTree = "<group>"; };
+		DAF8AB592A2C8D65006FC579 /* fower2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fower2.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,9 @@
 				DAD2AB562A276CFB00452467 /* Assets.xcassets */,
 				DAD2AB582A276CFB00452467 /* LaunchScreen.storyboard */,
 				DAD2AB5B2A276CFB00452467 /* Info.plist */,
+				DAF8AB552A2C8D26006FC579 /* flower1.jpeg */,
+				DAF8AB572A2C8D43006FC579 /* flower3.jpeg */,
+				DAF8AB592A2C8D65006FC579 /* fower2.jpeg */,
 			);
 			path = SlideshowApp;
 			sourceTree = "<group>";
@@ -128,7 +137,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAF8AB582A2C8D44006FC579 /* flower3.jpeg in Resources */,
+				DAF8AB5A2A2C8D65006FC579 /* fower2.jpeg in Resources */,
 				DAD2AB5A2A276CFB00452467 /* LaunchScreen.storyboard in Resources */,
+				DAF8AB562A2C8D26006FC579 /* flower1.jpeg in Resources */,
 				DAD2AB572A276CFB00452467 /* Assets.xcassets in Resources */,
 				DAD2AB552A276CF700452467 /* Main.storyboard in Resources */,
 			);

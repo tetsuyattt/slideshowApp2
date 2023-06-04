@@ -16,11 +16,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="b1b-mk-uQy">
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="b1b-mk-uQy">
                                 <rect key="frame" x="50" y="667.66666666666663" width="293" height="50.333333333333371"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndZ-x1-HYN">
-                                        <rect key="frame" x="0.0" y="0.0" width="84.333333333333329" height="50.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="96.333333333333329" height="50.333333333333336"/>
                                         <color key="backgroundColor" systemColor="systemCyanColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="進む" buttonSize="large">
@@ -31,7 +31,7 @@
                                         </connections>
                                     </button>
                                     <button toolTip="停止" opaque="NO" contentMode="scaleToFill" restorationIdentifier="startstopbtn" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgD-hV-xzc">
-                                        <rect key="frame" x="104.33333333333334" y="0.0" width="84.333333333333343" height="50.333333333333336"/>
+                                        <rect key="frame" x="98.333333333333343" y="0.0" width="96.333333333333343" height="50.333333333333336"/>
                                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="再生" buttonSize="large">
@@ -42,7 +42,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGZ-88-GUr">
-                                        <rect key="frame" x="208.66666666666669" y="0.0" width="84.333333333333314" height="50.333333333333336"/>
+                                        <rect key="frame" x="196.66666666666666" y="0.0" width="96.333333333333343" height="50.333333333333336"/>
                                         <color key="backgroundColor" systemColor="systemCyanColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="戻る" buttonSize="large">
@@ -55,7 +55,7 @@
                                 </subviews>
                             </stackView>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="imageView" translatesAutoresizingMaskIntoConstraints="NO" id="vmW-0V-P5R">
-                                <rect key="frame" x="50" y="309" width="293" height="250"/>
+                                <rect key="frame" x="50" y="367.66666666666669" width="293" height="250.00000000000006"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="Ubf-Ag-hIv"/>
@@ -68,14 +68,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vmW-0V-P5R" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="250" id="Izj-Ht-o0F"/>
-                            <constraint firstItem="vmW-0V-P5R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="MBM-3x-wVf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="b1b-mk-uQy" secondAttribute="bottom" constant="100" id="S0E-QF-ha4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vmW-0V-P5R" secondAttribute="trailing" constant="50" id="Y0Z-su-sCA"/>
                             <constraint firstItem="b1b-mk-uQy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="YF9-e6-fs6"/>
                             <constraint firstItem="vmW-0V-P5R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="hfZ-hs-sJh"/>
+                            <constraint firstItem="b1b-mk-uQy" firstAttribute="top" secondItem="vmW-0V-P5R" secondAttribute="bottom" constant="50" id="kwJ-VP-mJR"/>
                             <constraint firstAttribute="trailing" secondItem="b1b-mk-uQy" secondAttribute="trailing" constant="50" id="lVs-Wn-YS5"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vmW-0V-P5R" secondAttribute="trailing" constant="50" id="tbx-Hv-f1N"/>
                         </constraints>
                     </view>
                     <connections>
