@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let imageName = ["flower1", "flower2", "flower3"]
+    let imageName = ["flower1.jpeg", "flower2.jpeg", "flower3.jpeg"]
     var changeImgNo = 0
     var timer: Timer! //タイマー
     
@@ -49,14 +49,14 @@ class ViewController: UIViewController {
             timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(timerUpdate), userInfo: nil, repeats: true)
             nextbtn.isEnabled = false//再生停止ボタン押すと、他のボタンが押せなくなる
             backbtn.isEnabled = false
-            sender.setTitle("再生中", for: .normal)
+            sender.setTitle("停止", for: .normal)
         }
         else {      //タイマーが"nil"じゃない時
             self.timer.invalidate() //タイマー止める
             self.timer = nil
             nextbtn.isEnabled = true  //他のボタン復活
             backbtn.isEnabled = true
-            sender.setTitle("停止中", for: .normal)
+            sender.setTitle("再生", for: .normal)
         }
     }
     
@@ -88,7 +88,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        let imageName = UIImage(named: "flower1")
+        let imageName = UIImage(named: "flower1.jpeg")
         imageView.image = imageName
         
         
@@ -99,6 +99,9 @@ class ViewController: UIViewController {
     
     @objc func imageTapped() {
         performSegue(withIdentifier: "magImgViewC", sender: self)
+        
+        self.timer.invalidate()
+        self.timer = nil
     }
         
     
