@@ -43,6 +43,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var backbtn: UIButton!
     
     
+    @IBOutlet weak var startstopbtn: UIButton!
+//    →最初入れてなかったから遷移後のボタン表記が変わらなかった
+    
     @IBAction func startstopbtn(_ sender: UIButton){
        
         if self.timer == nil {
@@ -66,10 +69,11 @@ class ViewController: UIViewController {
             displayImage()
     }
         
-    private func display() {
-        let name = imageName[changeImgNo]
-        imageView.image = UIImage(named: name)
-    }   //←ChatGPTに教えてもらったらやつ、これ入れたら自動送りされるようになった
+//    private func display() {
+//        let name = imageName[changeImgNo]
+//        imageView.image = UIImage(named: name)
+//    }   //←ChatGPTに教えてもらったらやつ、これ入れたら自動送りされるようになった
+//    →そもそもこの後display出てこないからいらないよ
     
     
     @IBAction func backbtn(_ sender: Any) {
@@ -90,33 +94,44 @@ class ViewController: UIViewController {
         
         let imageName = UIImage(named: "flower1.jpeg")
         imageView.image = imageName
-        
-        
-        let tapGestureRecognizer = UIGestureRecognizer(target: self, action: #selector(imageTapped))
-        imageView.addGestureRecognizer(tapGestureRecognizer)
-        imageView.isUserInteractionEnabled = true
-    }
-    
-    @objc func imageTapped() {
-        performSegue(withIdentifier: "magImgViewC", sender: self)
-        
-        self.timer.invalidate()
-        self.timer = nil
     }
         
+//        let tapGestureRecognizer = UItapGestureRecognizer(target: self, action: #selector(imageTapped))
+//        imageView.addGestureRecognizer(tapGestureRecognizer)
+//        imageView.isUserInteractionEnabled = true
+//    }
+//
+//    @objc func imageTapped() {
+//        performSegue(withIdentifier: "magImgViewC", sender: self)
+//
+//        self.timer.invalidate()
+//        self.timer = nil
+//    }→いらないよ
+        
     
-        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            let magImgViewController: magImgViewController = segue.destination as! magImgViewController
-            magImgViewController.magImage = imageView.image
-    
-            //let magImgViewController = storyboard?.instantiateViewController(withIdentifier: "magImgViewController") as! magImgViewController
-            //magImgViewController.magImage = imageView.image
-            //present(magImgViewController, animated: true, completion: nil)
-        }//「func prepare()」を「objc func imageTapped()」内に入れてたけど、ChatGPTから「外に出せ」って言われて外に出したらできた。あと、「objc func imageTapped()」に「performSegue()」入れろって言われたからそうしたらできた。GPTさんすげー
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let magImgViewController: magImgViewController = segue.destination as! magImgViewController
+        magImgViewController.magImage = imageView.image
+        
+        
+        if self.timer != nil {
+            self.timer.invalidate()
+            self.timer = nil
+        }
+        nextbtn.isEnabled = true  //他のボタン復活
+        backbtn.isEnabled = true
+        
+        startstopbtn.setTitle("再生", for: .normal)
+    }
+        
+        //let magImgViewController = storyboard?.instantiateViewController(withIdentifier: "magImgViewController") as! magImgViewController
+        //magImgViewController.magImage = imageView.image
+        //present(magImgViewController, animated: true, completion: nil)
+    //「func prepare()」を「objc func imageTapped()」内に入れてたけど、ChatGPTから「外に出せ」って言われて外に出したらできた。あと、「objc func imageTapped()」に「performSegue()」入れろって言われたからそうしたらできた。GPTさんすげー
     
     
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
-        
+      
     }
     
     

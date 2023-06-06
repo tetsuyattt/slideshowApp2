@@ -19,15 +19,15 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="b1b-mk-uQy">
                                 <rect key="frame" x="50" y="667.66666666666663" width="293" height="50.333333333333371"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndZ-x1-HYN">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGZ-88-GUr">
                                         <rect key="frame" x="0.0" y="0.0" width="96.333333333333329" height="50.333333333333336"/>
                                         <color key="backgroundColor" systemColor="systemCyanColor"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="進む" buttonSize="large">
+                                        <buttonConfiguration key="configuration" style="plain" title="戻る" buttonSize="large">
                                             <color key="baseForegroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="nextbtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VA4-Gu-0i7"/>
+                                            <action selector="backbtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gu6-eo-f0e"/>
                                         </connections>
                                     </button>
                                     <button toolTip="停止" opaque="NO" contentMode="scaleToFill" restorationIdentifier="startstopbtn" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgD-hV-xzc">
@@ -38,18 +38,18 @@
                                             <color key="baseForegroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="startstopbtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cxL-j4-mfE"/>
+                                            <action selector="startstopbtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UZa-hw-VPZ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGZ-88-GUr">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndZ-x1-HYN">
                                         <rect key="frame" x="196.66666666666666" y="0.0" width="96.333333333333343" height="50.333333333333336"/>
                                         <color key="backgroundColor" systemColor="systemCyanColor"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="戻る" buttonSize="large">
+                                        <buttonConfiguration key="configuration" style="plain" title="進む" buttonSize="large">
                                             <color key="baseForegroundColor" systemColor="tertiarySystemBackgroundColor"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="backbtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gu6-eo-f0e"/>
+                                            <action selector="nextbtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VA4-Gu-0i7"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -80,6 +80,7 @@
                         <outlet property="backbtn" destination="aGZ-88-GUr" id="J2h-Cq-9lw"/>
                         <outlet property="imageView" destination="vmW-0V-P5R" id="mXD-0U-DjO"/>
                         <outlet property="nextbtn" destination="ndZ-x1-HYN" id="sbh-tb-t17"/>
+                        <outlet property="startstopbtn" destination="lgD-hV-xzc" id="ApD-L0-C84"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
